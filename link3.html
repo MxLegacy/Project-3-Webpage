@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">My Account</a>
+  <a href="#">Courses</a>
+  <a href="#">Goals and Deadlines</a>
+  <a href="#">My Calendar</a>
+  <a class="active" href="#">Progress</a>
+</div>
+
+
+<div class="vertical-menu">
+  <a href="webpage.html">Progress</a>
+  <a href="link1.html">Link 1</a>
+  <a href="link2.html">Link 2</a>
+  <a href="link3.html"class="active">Link 3</a>
+  <a href="link4.html">Link 4</a>
+</div>
+
+<body><table style="width:650;  position: absolute; top: 52px; left: 210px">
+<tr>
+    <th>Assessment</th>
+    <th>Percentage</th>
+    <th>Weight</th>
+    <th>Mark</th>
+  </tr>
+  <tr>
+    <td>Task 1</td>
+    <td>80</td>
+    <td>10</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Test 1</td>
+    <td>75</td>
+    <td>20</td>
+    <td>15</td>
+  </tr>
+<tr>
+    <td>Task 2</td>
+    <td>75</td>
+    <td>10</td>
+    <td>7.5</td>
+	
+  </tr><tr>
+    <td>Test 2</td>
+    <td>45</td>
+    <td>10</td>
+    <td>4.5</td>
+  </tr><tr>
+    <td>Task 3</td>
+    <td>23</td>
+    <td>5</td>
+    <td>1.2</td>
+  </tr><tr>
+    <td>Test 3</td>
+    <td>70</td>
+    <td>5</td>
+    <td>3.5</td>
+  </tr><tr>
+    <td>Task 4</td>
+    <td>88</td>
+    <td>20</td>
+    <td>16.2</td>
+  </tr><tr>
+    <td>Test 4</td>
+    <td>65</td>
+    <td>20</td>
+    <td>13</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>75</td>
+    <td>100</td>
+    <td>75</td>
+  </tr>
+  
+  </table>
+
+
+<style>
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #200;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 55px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: orange;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: orange;
+  color: white;
+}
+
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #200;
+  color: white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: orange;
+}
+
+.vertical-menu a.active {
+  background-color: orange;
+  color: white;
+}
+
+
+
+
+</style>
+
+
+
+
+<div id="piechart" style="margin-left: 120px; margin-top: 50px"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Mark'],
+  ['Completed', 100],
+  ['Incomplete', 21],
+  ['', 0],
+  ['', 0],
+  ['', 0]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Total', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+  
+}
+</script>
+</head>
+
+</body>
+
+</html>
+
+<!--
+<?php
+
+echo "HELLO WORLD <br> ";
+echo "WE ARE READY!!"
+
+
+
+
+
+?>
+-->
